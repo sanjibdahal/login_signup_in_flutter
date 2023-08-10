@@ -102,19 +102,19 @@ class ForgotPassword extends StatelessWidget {
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Remember Password?',
+                  'Remember Password? ',
                   style: TextStyle(
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                TextButton(
-                  onPressed: () {
+                InkWell(
+                  onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -131,6 +131,7 @@ class ForgotPassword extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(height: 10),
           ],
         ),
       ),

@@ -231,19 +231,19 @@ class RegisterScreen extends StatelessWidget {
 
               //! const Spacer(), Dont use this affects scrolling
               //! const Expanded(child: Text('hello')),
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    'Don\'t have an account?',
+                    'Don\'t have an account? ',
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  TextButton(
-                    onPressed: () {
+                  InkWell(
+                    onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(

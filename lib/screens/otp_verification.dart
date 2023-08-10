@@ -169,19 +169,19 @@ class OtpVerification extends StatelessWidget {
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Didn\'t received code?',
+                  'Didn\'t received code? ',
                   style: TextStyle(
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                TextButton(
-                  onPressed: () {},
+                InkWell(
+                  onTap: () {},
                   child: const Text(
                     'Resend',
                     style: TextStyle(
@@ -193,6 +193,7 @@ class OtpVerification extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(height: 10),
           ],
         ),
       ),

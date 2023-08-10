@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/screens/login_screen.dart';
 import 'package:todo_app/screens/register_screen.dart';
+import 'package:todo_app/screens/todo_list_page.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -92,7 +93,7 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     ),
                     child: const Text(
-                      'Regsiter',
+                      'Register',
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'Poppins',
@@ -104,8 +105,13 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          TextButton(
-            onPressed: () {},
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const TodoListPage()));
+            },
             child: const Text(
               'Continue as guest',
               style: TextStyle(
@@ -115,6 +121,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(height: 10),
         ],
       ),
     );

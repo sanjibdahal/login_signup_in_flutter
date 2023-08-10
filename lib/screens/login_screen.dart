@@ -62,21 +62,26 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 15),
               //password
               Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 15, vertical: 4),
+                padding: const EdgeInsets.only(
+                    left: 15, top: 4, bottom: 4, right: 4),
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.circular(6),
                     color: Colors.grey.shade200,
                     border: Border.all(color: Colors.grey.shade300)),
-                child: TextFormField(
+                child: TextField(
                   style: const TextStyle(fontFamily: 'Poppins'),
                   obscureText: true,
                   decoration: InputDecoration(
                     hintText: 'Enter your password',
                     fillColor: Colors.grey[200],
                     border: InputBorder.none,
-                    suffixIcon: const Icon(Icons.remove_red_eye),
+                    suffixIcon: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.remove_red_eye,
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -215,19 +220,19 @@ class LoginScreen extends StatelessWidget {
 
               //! const Spacer(), Dont use this affects scrolling
               //! const Expanded(child: Text('hello')),
-              const SizedBox(height: 100),
+              const SizedBox(height: 120),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    'Don\'t have an account?',
+                    'Don\'t have an account? ',
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  TextButton(
-                    onPressed: () {
+                  InkWell(
+                    onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
